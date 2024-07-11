@@ -14,6 +14,7 @@ routes.post('/login', (req, res) => {
   
   if(user) {
     res.status(200).json(user);
+    authControler();
   } else {
     res.status(401).json({ message: "Credenciais invalidas" });
   }
